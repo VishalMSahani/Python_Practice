@@ -1,0 +1,25 @@
+class Employee:
+    Company_Name = "Google"  # This is a class Variable
+
+    def __init__(self, Name, ID):
+        self.name = Name  # these are instance variable
+        self.id = ID
+
+    def getDetils(self):
+        print(f"{self.name} is working in {self.Company_Name} & his ID no. is {self.id}")
+
+    #Class Method
+    @classmethod
+    def ChangeCompany(cls, newCompany):
+        cls.Company_Name = newCompany
+
+
+e1 = Employee("Vishal Sahani", 56)
+e1.Company_Name = "Microsoft" #to change a class for instance from calss variable
+
+e2 = Employee("Rohit Singh", 75)
+e2.getDetils()
+e2.ChangeCompany("Tesla")  #this is changes using class method
+e2 = Employee("Rohit Singh", 75)
+e1.getDetils()
+e2.getDetils()
