@@ -1,0 +1,23 @@
+class Library:
+    def __init__(self, Books, Journal):
+        self.Books = Books
+        self.Journals = Journal
+        self._BooksCount = len(Books)
+        self._JournalCount = len(Journal)
+
+    def getDetails(self):
+        Books_Count = len(self.Books)
+        Journal_Count = len(self.Journals)
+        print(
+            f"List of Books: {self.Books} \nList of Journals: {self.Journals}\nTotal Number of Items in Library: {self._BooksCount + self._JournalCount}\nTotal Number of Books in Library: {Books_Count} \nTotal Number of Journals in Library: {Journal_Count}")
+
+    def SetBooksJournalCount(self, countB , countJ):
+        self._BooksCount = countB
+        self._BooksCount = countJ
+
+b = Library(["Maths , Physics"] , ["India , Bollywood"])
+
+b.getDetails()
+print("After Modification of Library")
+b.SetBooksJournalCount(25 ,26)
+b.getDetails()
